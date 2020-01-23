@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Text;
 
 namespace ctci.Library
@@ -162,7 +161,8 @@ namespace ctci.Library
                     {
                         Console.Write("1");
                     }
-                    else {
+                    else
+                    {
                         Console.Write("0");
                     }
                 }
@@ -179,6 +179,14 @@ namespace ctci.Library
             Console.WriteLine("");
         }
 
+        public static void PrintIntList(IEnumerable<int> list)
+        {
+            Console.Write("{");
+            foreach (var v in list)
+                Console.Write($"{v}, ");
+            Console.WriteLine("\b\b}");
+        }
+
         public static string CharArrayToString(char[] array)
         {
             StringBuilder buffer = new StringBuilder(array.Length);
@@ -189,16 +197,6 @@ namespace ctci.Library
                     break;
                 }
                 buffer.Append(c);
-            }
-            return buffer.ToString();
-        }
-
-        public static string ListOfPointsToString(List<Point> list)
-        {
-            StringBuilder buffer = new StringBuilder();
-            foreach (Point p in list)
-            {
-                buffer.Append("(" + p.X + "," + p.Y + ")");
             }
             return buffer.ToString();
         }
@@ -344,6 +342,7 @@ namespace ctci.Library
                 "who",
                 "him",
                 "been",
+                "bee",
                 "has",
                 "more",
                 "if",
